@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { InView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import video from '../videos/about.mp4'
 
 const About = () => {
@@ -61,12 +62,15 @@ const About = () => {
                                         </div>
                                     </div>
                                 </div>
-
+                                <div className="arrow">
+                                    <Link to="/contact"><i className='bx bx-right-arrow'></i></Link>
+                                </div>
                             </InView>
                         </div>
+
                     </div>
                     <div className="col-md-6 video d-md-block d-none">
-                        <video  autoPlay loop>
+                        <video autoPlay loop>
                             <source src={video} type="video/mp4" />
                         </video>
                     </div>

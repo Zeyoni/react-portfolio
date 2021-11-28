@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
 
@@ -23,6 +24,9 @@ const Contact = () => {
                         <span className="info mt-3">
                             <i className='bx bx-mail-send me-3'></i> zeeynalabdin@gmail.com
                         </span>
+                        <div className="arrow mt-4">
+                            <Link to="/"><i className='bx bx-left-arrow'></i></Link>
+                        </div>
                     </div>
 
                     <div className="col-md-6 form">

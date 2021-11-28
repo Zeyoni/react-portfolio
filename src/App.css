@@ -25,7 +25,7 @@
     min-height: 60px;
     width: 100%;
     background: #ffffff !important;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.055)!important;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.035)!important;
     z-index: 1000;
 }
 .navbar *{
@@ -85,6 +85,7 @@
 /* ERROR */
 
 /* HOME */
+
 .Home{
     background: var(--main-background);
     width: 100%;
@@ -92,7 +93,7 @@
 }
 
 .Home .wrapper {
-    overflow: hidden;
+    overflow-x: hidden;
     height: auto;
 }
 .content{
@@ -386,6 +387,11 @@
 .About .video{
     position: relative;
 }
+.About .arrow{
+    position: absolute;
+    left: 28px;
+    bottom: -90px;
+}
 .About video{
     left: 50%;
     top: 50%;
@@ -512,7 +518,7 @@
         height: 80vh !important;
     }
     .Home .custom-card{
-        width: 83% !important;
+        width: 80% !important;
     }
     .Home .photo img{
         width: 75% !important;
