@@ -96,7 +96,7 @@
     height: auto;
 }
 .content{
-    padding-left: 5% !important;
+    padding: 0 5% !important;
     height: calc(100vh - 72px);
     display: flex;
     justify-content: center;
@@ -519,6 +519,9 @@
     }
     .contact .row > .content, .contact .form, .content{
         height: 75vh;
+    }
+    .contact .form :is(button, input){
+        width: 100%;
     }
 }
 @media (max-width: 400px) {
