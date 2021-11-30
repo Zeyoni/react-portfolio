@@ -6,14 +6,15 @@ import About from './components/About';
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Error from './components/Error';
+import Animation from './components/Animation';
 
 
 
 function App() {
   return (
     <div className="App">
+      <Animation />
       <Navbar />
-
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
         <Route path="/portfolio" element={<Portfolio />}></Route>

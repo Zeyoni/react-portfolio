@@ -6,18 +6,81 @@
     --main-background: #f9f9f9;
     --custom-gray: #0000008c;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-
-
-
-::-webkit-scrollbar{
-    width: 8px;
+body{
+  font-family: 'Poppins', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar-thumb{
-    border-radius: 8px;
-    width: 10px;
-    background: #9e9e9e;
+
+
+
+.animation{
+    pointer-events: none;
+    z-index: 10000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.line{
+    z-index: 100000;
+    width: 1px;
+    height: 0px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: line-animation 1.3s cubic-bezier(0.99, 0.04, 0.45, 0.99) 1s;
+}
+
+.square{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.left-slide,
+.right-slide{
+    z-index: 10000;
+    position: absolute;
+    width: 51%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    animation: square-animation .3s ease-in 2.3s forwards;
+}
+.left-slide{
+    position: absolute;
+    left: 0;
+}
+.right-slide{
+    position: absolute;
+    right: 0;
+}
+
+@keyframes line-animation {
+    0%{height: 0px;opacity: 1;}
+    100%{height: 100%;opacity: 0;}
+}
+
+@keyframes square-animation {
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 0%;
+        display: none !important;
+    }
 }
 
 /* NAVBAR */
@@ -90,6 +153,7 @@
     background: var(--main-background);
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .Home .wrapper {
@@ -102,6 +166,17 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    animation: right 1s forwards 2.3s ease;
+}
+@keyframes right {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 .Home .wrapper .top{
     display: flex;
@@ -184,6 +259,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden !important;
+    animation: right 1s forwards 2.3s ease;
 }
 .Home .photo .custom-card{
     position: absolute;
@@ -193,6 +270,7 @@
     height: 440px;
     background: var(--main-color);
     animation: card 8s ease infinite;
+    overflow: hidden !important;
 }
 
 @keyframes card {
@@ -228,6 +306,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0 5%;
+    overflow: hidden;
 }
 .portfolio .projects{
     overflow-x: hidden;
@@ -415,6 +494,7 @@
 
 /* CONTACT */
 .contact{
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background: var(--main-background);
