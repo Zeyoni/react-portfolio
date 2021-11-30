@@ -13,7 +13,6 @@ import Animation from './components/Animation';
 function App() {
   return (
     <div className="App">
-      <Animation />
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
