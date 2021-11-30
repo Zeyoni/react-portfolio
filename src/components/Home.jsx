@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import photo from '../photos/photo.jpg'
-import Animation from './Animation';
 
 const Home = () => {
 

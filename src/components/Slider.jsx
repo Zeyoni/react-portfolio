@@ -32,15 +32,19 @@ const Slider = (props) => {
                         "spaceBetween": 50
                     }
                 }} className="mySwiper">
+
                 {
-                    props.photos.map((photo, i) => (
+                    props.source.map((element, i) => (
                         <SwiperSlide key={i} >
-                            <img src={photo} alt="" />
+                            <a href={element.link} target="_blank" rel="noreferrer">
+                                <img src={element.image} />
+                            </a>
                         </SwiperSlide>
                     ))
                 }
-                <div className="my-navigation">
-                    <div className="slidePrev-btn"><i className='bx bx-left-arrow-alt' ></i></div>
+
+                <div className="my-navigation mt-2">
+                    <div className="slidePrev-btn me-3"><i className='bx bx-left-arrow-alt' ></i></div>
                     <div className="slideNext-btn"><i className='bx bx-right-arrow-alt' ></i></div>
                 </div>
             </Swiper>

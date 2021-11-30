@@ -79,7 +79,6 @@ body{
     }
     100%{
         width: 0%;
-        display: none !important;
     }
 }
 
@@ -166,8 +165,11 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+.Home .content{
     animation: right 1s forwards 2.3s ease;
 }
+
 @keyframes right {
     0%{
         opacity: 0;
@@ -320,7 +322,7 @@ body{
   
 .swiper-slide {
     cursor: pointer;
-    height: 350px !important;
+    height: 175px !important;
     object-fit: cover;
     font-size: 18px;
     background: #fff;
@@ -337,24 +339,51 @@ body{
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
+    position: relative;
     border-radius: 10px;
     display: block;
     width: 100%;    
     object-fit: cover;
     box-shadow: 0 .125rem .55rem rgba(0,0,0,.05)!important;
+    overflow: hidden;
+}
+.swiper-slide::before{
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1000000 ;
+    content: 'Sayta Get';
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.692);
+    transition: 0.5s ease;
+}
+.swiper-slide:hover:before{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(5px);
 }
 .my-navigation{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     z-index: 1;
-    width: 70px !important;
-    position: absolute !important;
-    right: 0px !important;
-    bottom: 15px;
+    width: 100%;
 }
 .my-navigation i{
     cursor: pointer;
