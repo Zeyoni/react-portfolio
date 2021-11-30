@@ -9,22 +9,27 @@ const initialState = {
         {
             link: "https://direktkurse.com/az",
             image: slider1,
+            description: "Direkt kurse",
         },
         {
             link: "http://kokhuceyre.az/az",
             image: slider2,
+            description: "Kök Hüceyrə",
         },
         {
             link: "https://raufsadiqov.az/az",
             image: slider3,
+            description: "Rauf Sadiqov",
         },
         {
             link: "https://zeyoni.github.io/myBlog/",
             image: slider4,
+            description: "Blogum",
         },
         {
             link: "https://zeyoni.github.io/Food/",
             image: slider5,
+            description: "Food",
         }
     ]
 }

@@ -37,7 +37,7 @@ const Slider = (props) => {
                     props.source.map((element, i) => (
                         <SwiperSlide key={i} >
                             <a href={element.link} target="_blank" rel="noreferrer">
-                                <img src={element.image} />
+                                <img src={element.image} alt={element.description}/>
                             </a>
                         </SwiperSlide>
                     ))
