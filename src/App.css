@@ -166,9 +166,6 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-.Home .content{
-    animation: right 1s forwards 2.3s ease;
-}
 
 @keyframes right {
     0%{
@@ -262,7 +259,6 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden !important;
-    animation: right 1s forwards 2.3s ease;
 }
 .Home .photo .custom-card{
     position: absolute;
