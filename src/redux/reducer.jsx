@@ -1,8 +1,8 @@
 import slider1 from '../../src/photos/direktkurse.jpg'
 import slider2 from '../../src/photos/kokhuceyre.png'
 import slider3 from '../../src/photos/raufsadiqov.png'
-import slider4 from '../../src/photos/portfolio.png'
-import slider5 from '../../src/photos/food.png'
+import slider4 from '../../src/photos/marketplace.png'
+import slider5 from '../../src/photos/bikerstore.png'
 
 const initialState = {
     source: [
@@ -22,14 +22,14 @@ const initialState = {
             description: "Rauf Sadiqov",
         },
         {
-            link: "https://zeyoni.github.io/myBlog/",
+            link: "https://react-marketplace0.netlify.app/",
             image: slider4,
-            description: "Blogum",
+            description: "React e-commerce",
         },
         {
-            link: "https://zeyoni.github.io/Food/",
+            link: "https://zeyoni.github.io/BikerStore/",
             image: slider5,
-            description: "Food",
+            description: "Biker Store",
         }
     ]
 }
